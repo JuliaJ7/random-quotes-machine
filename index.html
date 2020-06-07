@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>
+        Random Quote Machine
+    </title>
+    <!-- Bootstrap styles are used throughout this application. They are all included in this one CSS Link. -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
+</head>
+<body>
+    <header class="jumbotron">
+        <div class="row">
+            <div class="container" id="app">
+                <div class="col-12">
+                    <div class="card card-body bg-light">
+                        <h1 class="justify-content-center">Random Quote Machine</h1>
+                        <blockquote class="blockquote">
+                            <p>{{ quotes[current_id].text }}</p>
+                            <footer class="blockquote-footer"> {{ quotes[current_id].author }}</footer>
+                        </blockquote>
+                        <div class="col-12 m-auto">
+                            <button class="btn btn-info" v-on:click="nextQuote">Next Quote</button>
+                        </div>
+                    </div>
+                </div>  
+            </div>
+        </div>
+    </header>
+    <!-- Vue is included as a script tag-->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+    <!-- The JavaScript file containing the application logic. -->
+    <script src="app.js"></script>
+</body>
+
+</html>
